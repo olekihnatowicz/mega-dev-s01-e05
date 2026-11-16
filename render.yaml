@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: rig-pulse-agent
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: OWNER_CODE
+        sync: false
+      - key: PING_KEY
+        sync: false
+      - key: MODEL_API_KEY
+        sync: false
+      - key: MODEL_BASE_URL
+        sync: false
+      - key: PULSE_MODEL
+        sync: false
+      - key: TEST_MODEL
+        sync: false
